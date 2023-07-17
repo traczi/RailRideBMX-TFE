@@ -15,3 +15,5 @@ C:\Git\RailRideBMX\Application\bin\Debug\net6.0\DataAccess.dll
 C:\Git\RailRideBMX\Application\bin\Debug\net6.0\DataAccess.pdb
 C:\Git\RailRideBMX\Application\bin\Debug\net6.0\Core.pdb
 C:\Git\RailRideBMX\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Git\RailRideBMX\Application\bin\Debug\net6.0\Application.runtimeconfig.json
+C:\Git\RailRideBMX\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache

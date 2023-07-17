@@ -1,7 +1,5 @@
 ﻿using Application.Models.Bmx;
 using Application.Services;
-using Application.Services.Impl;
-using Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RailRideBMX.Controllers;

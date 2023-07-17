@@ -36,14 +36,12 @@ public class BmxService : IBmxService
         var bmx = new Bmx()
         {
             Brand = bmxResponseModel.Brand,
-            Id = bmxResponseModel.Id,
             Price = bmxResponseModel.Price
         };
         var createBmx = await _bmxRepository.CreateBmx(bmx);
         return new BmxResponseModel()
         {
             Brand = createBmx.Brand,
-            Id = createBmx.Id,
             Price = createBmx.Price
         };
     }
