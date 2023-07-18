@@ -748,6 +748,15 @@
           }
         }
       },
+      "OneOf/3.0.255": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/OneOf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OneOf.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2438,6 +2447,21 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "OneOf/3.0.255": {
+      "sha512": "EKrroFkaqbCB80WXr8isiCpSyelDc44qEdUwJ2v++zUDXr3igZ88UPt8MRGlNP5CDdOlHyTjCEzm1WY0MHCypg==",
+      "type": "package",
+      "path": "oneof/3.0.255",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/OneOf.dll",
+        "lib/net45/OneOf.dll",
+        "lib/netstandard1.3/OneOf.dll",
+        "lib/netstandard2.0/OneOf.dll",
+        "oneof.3.0.255.nupkg.sha512",
+        "oneof.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -4282,7 +4306,8 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "DataAccess >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.3.0",
-      "Microsoft.EntityFrameworkCore.Design >= 6.0.16"
+      "Microsoft.EntityFrameworkCore.Design >= 6.0.16",
+      "OneOf >= 3.0.255"
     ]
   },
   "packageFolders": {
@@ -4345,6 +4370,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.16, )"
+          },
+          "OneOf": {
+            "target": "Package",
+            "version": "[3.0.255, )"
           }
         },
         "imports": [

@@ -86,3 +86,4 @@ C:\Git\RailRideBMX\RailRideBMX\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Git\RailRideBMX\RailRideBMX\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Git\RailRideBMX\RailRideBMX\bin\Debug\net6.0\Application.dll
 C:\Git\RailRideBMX\RailRideBMX\bin\Debug\net6.0\Application.pdb
+C:\Git\RailRideBMX\RailRideBMX\bin\Debug\net6.0\OneOf.dll

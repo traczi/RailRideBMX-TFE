@@ -26,10 +26,10 @@ public class BmxRepository : IBmxRepository
 
     public async Task<Bmx> UpdateBmx(Bmx bmx)
     {
-        var existingUser = await _context.Bmxs.FindAsync(bmx.Id);
-        if (existingUser != null)
+        var existingBmx = await _context.Bmxs.FindAsync(bmx.Id);
+        if (existingBmx != null)
         {
-            _context.Entry(existingUser).State = EntityState.Detached;
+            _context.Entry(existingBmx).State = EntityState.Detached;
         }
         _context.Bmxs.Update(bmx);
         await _context.SaveChangesAsync();

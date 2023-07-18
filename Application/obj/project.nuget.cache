@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "y0t8vtEl347w/mL1vwDedtDVDx9YngtmtcX4m2Dw9Qyz7DJpPi7WR0bmRARaynfTpY1uWmnL2yYoX1ZjM2K0Hg==",
+  "dgSpecHash": "07tyfHzui6ZoMpYTty/KdvBlS8bq2IRqdxBPmowBppw8nbPsT8+X4a1SkNrbyZ/PD0Mx5MATMOIjVVx4hxTV9g==",
   "success": true,
   "projectFilePath": "C:\\Git\\RailRideBMX\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\matte\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\matte\\.nuget\\packages\\oneof\\3.0.255\\oneof.3.0.255.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",

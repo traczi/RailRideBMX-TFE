@@ -1,7 +1,8 @@
-﻿using Application.Models.Bmx;
-using Application.Models.User;
+﻿using Application.Models.User;
 using Core.Entities;
 using DataAccess.Repositories;
+using Microsoft.AspNetCore.Mvc;
+using OneOf;
 
 namespace Application.Services.Impl;
 
@@ -25,5 +26,20 @@ public class UserService : IUserService
         };
         await _userRepository.CreateUser(user);
         return user;
+    }
+
+    public async Task<OneOf<User, string>> LoginUserAsync(UserLoginResponseModel userLoginResponseModel)
+    {
+        var user = new User()
+        {
+            Email = userLoginResponseModel.Email,
+            Password = userLoginResponseModel.Password
+        };
+        var userLogin = await _userRepository.LoginUser(user);
+        if (userLogin == null)
+        {
+            return "L'utilisateur n'a pas été trouvé";
+        }
+        return userLogin;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vrsBh6NinBZ2+iHbhMizriRwUP8EZO/cPPu3SMlW7Xf4IaAAgVle5NvE1zx9tTVnJzalC83/pjVv12hkLOCoYQ==",
+  "dgSpecHash": "E132MaKjbJJw3/6R5UL1WmQJv6g+gTithwOUIRds+Y+tRWQmMmcO7MBvuXrRLt/suVOhE+zdpsWQ4YJGS1kvfg==",
   "success": true,
   "projectFilePath": "C:\\Git\\RailRideBMX\\RailRideBMX\\RailRideBMX.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\matte\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\matte\\.nuget\\packages\\oneof\\3.0.255\\oneof.3.0.255.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

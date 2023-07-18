@@ -475,6 +475,14 @@
           }
         }
       },
+      "OneOf/3.0.255": {
+        "runtime": {
+          "lib/netstandard2.0/OneOf.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
@@ -821,7 +829,8 @@
           "AutoMapper": "10.1.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "DataAccess": "1.0.0",
-          "FluentValidation.AspNetCore": "11.3.0"
+          "FluentValidation.AspNetCore": "11.3.0",
+          "OneOf": "3.0.255"
         },
         "runtime": {
           "Application.dll": {}
@@ -1175,6 +1184,13 @@
       "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+    },
+    "OneOf/3.0.255": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EKrroFkaqbCB80WXr8isiCpSyelDc44qEdUwJ2v++zUDXr3igZ88UPt8MRGlNP5CDdOlHyTjCEzm1WY0MHCypg==",
+      "path": "oneof/3.0.255",
+      "hashPath": "oneof.3.0.255.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.2.3": {
       "type": "package",
