@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.register-field{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title-register{
+    color: #000;
+    font-family: "Font/Heebo-Black.ttf" sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.register-content{
+    border: 1px solid #939393;
+    background: rgba(235, 235, 235, 0.60);
+    display: flex;
+    flex-direction: column;
+    width: 506px;
+    height: 600px;
+    flex-shrink: 0;
+    margin-top: 20px;
+    padding-top: 2%;
+}
+.register-content p{
+    color: #000;
+    font-family: "Font/Heebo-Black.ttf" sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 5%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+.register-content .register-field{
+    border: 1px solid #939393;
+    background: #D9D9D9;
+    margin: 0 5%;
+    height: 6%;
+    width: 85%;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.register-content .error-register{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.register-content .error-register div{
+    color: red;
+    font-family: "Font/Heebo-Black.ttf" sans-serif;
+    font-size: 20px;
+    margin-right: 10%;
+}
+.register-content .register-button{
+    border: 1px solid #E6E6E9;
+    background: #333533;
+    color: #FFF;
+    text-align: center;
+    font-family: "Font/Heebo-Black.ttf" sans-serif;
+    font-size: 20px;
+    height: 50px;
+    width: 40%;
+    margin: 0 150px;
+    margin-top: 40px;
+}
+

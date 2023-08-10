@@ -14,6 +14,7 @@ public class UserController : ApiController
     }
 
     [HttpPost]
+    [Route("Register")]
     public async Task<IActionResult> CreateUserAsync(UserResponseModel userResponseModel)
     {
         var createUser = await _userService.CreateUserAsync(userResponseModel);

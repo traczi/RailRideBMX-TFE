@@ -19,8 +19,8 @@ public class UserService : IUserService
     {
         var user = new User()
         {
-            Name = userResponseModel.Name,
-            Surname = userResponseModel.Surname,
+            Firstname = userResponseModel.Name,
+            Lastname = userResponseModel.Surname,
             Email = userResponseModel.Email,
             Password = userResponseModel.Password
         };
