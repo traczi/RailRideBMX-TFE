@@ -2,6 +2,7 @@ import React from "react";
 import './Register.css'
 import {Formik, Form, Field} from 'formik'
 import * as Yup from 'yup'
+import ValidationForm from "../FormValidation/FormValidation";
 
 const getCharacterValidationError = (str) => {
     return `Your password must have at least 1 ${str} character`;
@@ -70,6 +71,7 @@ const Register = () => {
                         <Field name="retypePassword" type="password" className="register-field"/>
                         {errors.retypePassword && touched.retypePassword}
                         <div>{errors.retypePassword}</div>
+                        {/* <ValidationForm errors= {errors} touched= {touched} title= "test" name= "firstname" type="text" className="register-field" /> */}
                         <button type="submit" className="register-button">Register</button>
                     </Form>
                 </div>
