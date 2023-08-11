@@ -176,3 +176,4 @@ C:\Git\RailRideBMX\BackEnd\RailRideBMX\obj\Debug\net6.0\refint\RailRideBMX.dll
 C:\Git\RailRideBMX\BackEnd\RailRideBMX\obj\Debug\net6.0\RailRideBMX.pdb
 C:\Git\RailRideBMX\BackEnd\RailRideBMX\obj\Debug\net6.0\RailRideBMX.genruntimeconfig.cache
 C:\Git\RailRideBMX\BackEnd\RailRideBMX\obj\Debug\net6.0\ref\RailRideBMX.dll
+C:\Git\RailRideBMX\BackEnd\RailRideBMX\bin\Debug\net6.0\BCrypt.Net-Next.dll

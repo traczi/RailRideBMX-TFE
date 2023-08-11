@@ -1,15 +1,13 @@
 import React from "react";
-import {Field} from 'formik'
+import {ErrorMessage, Field} from 'formik'
 
-const ValidationForm = (errors, touched, title, name, type, className) => {
+const FormValidation = (props) => {
     return(
-        <div>   
-            <p>{title}</p>
-            <Field type={type} name={name} className={className}/>
-            {errors.name && touched.name}
-            <div>{errors.name}</div>
-        </div>
+        <div>
+            <p>{props.title}</p>
+            <Field type={props.type} name={props.name} className={props.className}></Field>
+            <ErrorMessage name={props.name} component="div"></ErrorMessage>
+        </div> 
     )
 }
-
-export default ValidationForm
+export default FormValidation

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "n+j0anDPMkBkPNEi80G2EF/7bbTHZQJn+51I7Rs2ga5B+RwLUjpIMdLGQ+ntthgCBjsZS4xwnAHP1vIX3B2Rfg==",
+  "dgSpecHash": "+3sxj8EWs1UX7y1D846VXQu65YA0oeC3f+A2VlGmjIPmvnvwj8Kj8MkWzZvA3xZfmHCW/hCV6jGvVeoB+QFRgA==",
   "success": true,
   "projectFilePath": "C:\\Git\\RailRideBMX\\BackEnd\\RailRideBMX\\RailRideBMX.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matte\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\matte\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\matte\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
