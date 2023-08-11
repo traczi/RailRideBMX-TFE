@@ -1,5 +1,7 @@
-﻿using Application.Models.Bmx;
+﻿using Application.Helpers;
+using Application.Models.Bmx;
 using Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RailRideBMX.Controllers;
@@ -14,6 +16,7 @@ public class BmxController : ApiController
     }
 
     [HttpGet]
+    [Authorize(Roles = "test")]
     public async Task<IActionResult> GetAllBmxAsync()
     {
         var test = await _bmxService.GetAllBmxAsync();
@@ -32,7 +35,7 @@ public class BmxController : ApiController
     public async Task<IActionResult> CreateBmxAsync(BmxResponseModel bmxResponseModel)
     {
         var createBmx = await _bmxService.CreateBmxAsync(bmxResponseModel);
-        return Ok(createBmx);
+        return SuccessResponseHelper.CreatedResponse("Vous avez bien ajouté un article");
     }
     
     [HttpPut]

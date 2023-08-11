@@ -1,8 +1,12 @@
-﻿using Application.Models.User;
+﻿using System.Text.RegularExpressions;
+using Application.Models.User;
 using Core.Entities;
 using DataAccess.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using OneOf;
+using OneOf.Types;
+using RailRideBMX.Middleware;
+
 
 namespace Application.Services.Impl;
 
@@ -20,7 +24,18 @@ public class UserService : IUserService
 
     public async Task<User> CreateUserAsync(UserResponseModel userResponseModel)
     {
-        
+        var conditionEmail = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+        Regex regEmail = new Regex(conditionEmail);
+        if (!regEmail.IsMatch(userResponseModel.Email))
+        {
+            throw new BadRequestException("Cette adresse email est invalide !");
+        }
+        var condition = @"^(?=.*[A-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#?!@$%^&*-])\S{7,15}$";
+        Regex reg = new Regex(condition);
+        if (!reg.IsMatch(userResponseModel.Password))
+        {
+            throw new BadRequestException("Le mot de passe doit contenir au moins 8 caractères, avec au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (#?!@$%^&*-).");
+        }
         string passwordHash = BCrypt.Net.BCrypt.HashPassword(userResponseModel.Password);
         var user = new User()
         {
@@ -34,28 +49,40 @@ public class UserService : IUserService
         return user;
     }
 
-    public async Task<OneOf<User, string>> LoginUserAsync(UserLoginResponseModel userLoginResponseModel)
+    public async Task<OneOf<string>> LoginUserAsync(UserLoginRequestModel userLoginRequestModel)
     {
         var user = new User()
         {
-            Email = userLoginResponseModel.Email,
-            Password = userLoginResponseModel.Password
+            Email = userLoginRequestModel.Email,
+            Password = userLoginRequestModel.Password
         };
         var findUser = await _userRepository.FindByEmail(user); 
         if (findUser == null)
         {
-            return "L'utilisateur n'a pas été trouvé";
+            throw new NotFoundException("L'utilisateur n'a pas été trouvé");
         }
-        bool passwordHash = BCrypt.Net.BCrypt.Verify(userLoginResponseModel.Password,findUser.Password);
-        Console.WriteLine(userLoginResponseModel.Password);
+        bool passwordHash = BCrypt.Net.BCrypt.Verify(userLoginRequestModel.Password,findUser.Password);
+        Console.WriteLine(userLoginRequestModel.Password);
         Console.WriteLine(findUser.Password);
         if (!passwordHash)
         {
-            return "mdp mauvais";
+            throw new BadRequestException("Le mot de passe est incorrect");
         }
         var token = _jwtService.GenerateToken(findUser.Id, findUser.Email, findUser.Role);
-        Console.WriteLine(token);
-        var userLogin = await _userRepository.LoginUser(user);
-        return userLogin;
+        return token;
+    }
+
+    public async Task<User> ForgotPassword(UserForgotPasswordRequestModel userForgotPassword)
+    {
+        var user = new User()
+        {
+            Email = userForgotPassword.Email
+        };
+        var findUser = await _userRepository.FindByEmail(user);
+        if (findUser == null)
+        {
+            throw new NotFoundException("L'utilisateur n'a pas été trouvé");
+        }
+        return user;
     }
 }   

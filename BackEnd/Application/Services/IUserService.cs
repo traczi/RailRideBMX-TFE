@@ -7,5 +7,6 @@ namespace Application.Services;
 public interface IUserService
 {
     Task<User> CreateUserAsync(UserResponseModel userResponseModel);
-    Task<OneOf<User, string>> LoginUserAsync(UserLoginResponseModel userLoginResponseModel);
+    Task<OneOf<string>> LoginUserAsync(UserLoginRequestModel userLoginRequestModel);
+    Task<User> ForgotPassword(UserForgotPasswordRequestModel userForgotPassword);
 }

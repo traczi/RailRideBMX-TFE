@@ -16,5 +16,9 @@ public class ApplicationDbContext : DbContext
     {
         modelBuilder.Entity<Bmx>().HasKey(b => b.Id);
         modelBuilder.Entity<User>().HasKey(u => u.Id);
+
+        modelBuilder.Entity<User>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
     }
 }
