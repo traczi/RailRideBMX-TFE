@@ -1,4 +1,6 @@
-﻿namespace Core.Entities;
+﻿using Core.Enums;
+
+namespace Core.Entities;
 
 public class User
 {
@@ -7,5 +9,5 @@ public class User
     public string Lastname { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    public string Role { get; set; } = null;
+    public UserRole? Role { get; set; }
 }

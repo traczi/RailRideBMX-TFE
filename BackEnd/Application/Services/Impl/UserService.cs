@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
-using Application.Models.User;
+using Application.Models.User;  
 using Core.Entities;
+using Core.Enums;
 using DataAccess.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using OneOf;
@@ -43,7 +44,7 @@ public class UserService : IUserService
             Lastname = userResponseModel.Lastname,
             Email = userResponseModel.Email,
             Password = passwordHash, 
-            Role = "user"
+            Role = UserRole.User
         };
         await _userRepository.CreateUser(user);
         return user;
@@ -56,19 +57,19 @@ public class UserService : IUserService
             Email = userLoginRequestModel.Email,
             Password = userLoginRequestModel.Password
         };
-        var findUser = await _userRepository.FindByEmail(user); 
+        var findUser = await _userRepository.FindByEmail(user);
+        Console.WriteLine(user);
         if (findUser == null)
         {
             throw new NotFoundException("L'utilisateur n'a pas été trouvé");
         }
         bool passwordHash = BCrypt.Net.BCrypt.Verify(userLoginRequestModel.Password,findUser.Password);
-        Console.WriteLine(userLoginRequestModel.Password);
-        Console.WriteLine(findUser.Password);
         if (!passwordHash)
         {
             throw new BadRequestException("Le mot de passe est incorrect");
         }
-        var token = _jwtService.GenerateToken(findUser.Id, findUser.Email, findUser.Role);
+        Console.WriteLine(findUser.Role.ToString());
+        var token = _jwtService.GenerateToken(findUser.Id, findUser.Email, findUser.Role.ToString());
         return token;
     }
 
